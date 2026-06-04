@@ -133,7 +133,7 @@ How will participants connect?
 
 ## 🗄️ Data Model
 
-> TBA
+![ER Diagram](docs/Quiz.svg)
 
 ---
 
