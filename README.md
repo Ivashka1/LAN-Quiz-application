@@ -88,10 +88,30 @@ Host confirms correctness and awards points manually.
 All participants answer within a time limit via colored buttons on their phones.
 Score formula: `score = maxPoints × (1 - t/T) × isCorrect`
 
-### Risk Mode *(TBA)*
-A Jeopardy-style board of questions grouped by category and point value.
-Correct answer = points gained. Wrong answer = points lost.
-Details and rules TBA.
+### Risk Mode
+A Jeopardy-style team game played on a category board.
+
+**Board:** 6 categories × 5 questions each, increasing in point value and difficulty.
+Answered questions are removed from the board.
+
+**Teams:** 2–4 teams. The first team to select a question is chosen randomly.
+
+**Round flow:**
+1. The active team selects a category and point value from the board.
+2. The clue appears on the projector. A **10-second reading phase** begins —
+   buzzer buttons are disabled while participants read or listen to the clue.
+3. Buzzer buttons activate. The server records the **first team to buzz in**,
+   then waits **1 second** to capture any remaining teams in order of response.
+   Teams that did not buzz are appended in random order.
+4. The answering team has **10 seconds** to respond (configurable).
+   Responses must be phrased as a question: *"What is X?" / "Who is Y?"*
+
+**Scoring:**
+- Correct answer → team earns the clue's point value and selects the next clue
+- Incorrect answer → team loses the point value; the next team in queue gets a chance
+- Timeout → skipping question and reading the answer; the next team is randomly chosen again to pick a question
+- If no team answers correctly → all teams that attempted lose the point value;
+  next selection is chosen randomly
 
 ---
 
