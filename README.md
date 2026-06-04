@@ -84,7 +84,7 @@ LAN Quiz solves this by running entirely on the host's laptop, accessible to par
 First participant to tap the button earns the right to answer out loud.
 Host confirms correctness and awards points manually.
 
-### Kahoot Mode
+### Choice Mode
 All participants answer within a time limit via colored buttons on their phones.
 Score formula: `score = maxPoints × (1 - t/T) × isCorrect`
 
@@ -132,12 +132,6 @@ How will participants connect?
 ---
 
 ## 🗄️ Data Model
-
-> TBA
-
----
-
-## 🚀 Getting Started
 
 > TBA
 
