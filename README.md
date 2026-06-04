@@ -109,7 +109,8 @@ Answered questions are removed from the board.
 **Scoring:**
 - Correct answer → team earns the clue's point value and selects the next clue
 - Incorrect answer → team loses the point value; the next team in queue gets a chance
-- Timeout → skipping question and reading the answer; the next team is randomly chosen again to pick a question
+- No team buzzes in → time expires, correct answer is revealed, no points are
+  awarded or deducted; next selection is chosen randomly
 - If no team answers correctly → all teams that attempted lose the point value;
   next selection is chosen randomly
 
@@ -135,7 +136,7 @@ How will participants connect?
 
 ![ER Diagram](docs/er-diagram.svg)
 
-> 📐 [Interactive verion on dbdiagram.io](https://dbdiagram.io/d/er-diagram-6a21e85cd2fbd72c4d55e0c2)
+> 📐 [Interactive version  on dbdiagram.io](https://dbdiagram.io/d/er-diagram-6a21e85cd2fbd72c4d55e0c2)
 ---
 
 ## 👤 Author
