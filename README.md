@@ -133,8 +133,9 @@ How will participants connect?
 
 ## 🗄️ Data Model
 
-![ER Diagram](docs/Quiz.svg)
+![ER Diagram](docs/er-diagram.svg)
 
+> 📐 [Interactive verion on dbdiagram.io](https://dbdiagram.io/d/er-diagram-6a21e85cd2fbd72c4d55e0c2)
 ---
 
 ## 👤 Author
