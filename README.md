@@ -27,7 +27,7 @@ LAN Quiz solves this by running entirely on the host's laptop, accessible to par
 
 ## ✨ Features
 
-- 🧠 **Multiple game modes** — Buzzer, Kahoot-style, and Jeopardy-style (Risk Mode)
+- 🧠 **Multiple game modes** — Buzzer, Choice-style, and Jeopardy-style (Risk Mode)
 - 📱 **Mobile-friendly player view** — participants join via browser on their phones
 - 📺 **Projector host view** — questions, answers, timer, and leaderboard displayed for the whole room
 - 🌐 **Offline LAN operation** — no internet required at runtime
