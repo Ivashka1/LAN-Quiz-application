@@ -137,6 +137,30 @@ How will participants connect?
 ![ER Diagram](docs/er-diagram.svg)
 
 > 📐 [Interactive version  on dbdiagram.io](https://dbdiagram.io/d/er-diagram-6a21e85cd2fbd72c4d55e0c2)
+
+### Design Notes
+
+**Quiz** is the top-level entity — it defines the game mode and default timer that
+all its questions inherit unless overridden individually.
+
+**Category** exists only for Risk Mode, where questions are organized into a 6×5
+board. For Buzzer and Choice quizzes, no categories are created — `category_id`
+on Question is left null.
+
+**Question** stores all question types in a single table. The active game mode
+(set on Quiz) determines how a question is presented and scored — no separate
+tables per mode were introduced to keep the schema simple and queries straightforward.
+
+**AnswerOption** serves two purposes depending on the mode: in Choice Mode it holds
+2–4 selectable options with one marked correct; in Buzzer and Risk Mode it holds a
+single entry — the model answer displayed to the host for manual confirmation.
+
+**Players are not stored in the database.** During an active session, connected
+players (name, score, buzzer state) are kept in memory on the server. This avoids
+repeated read/write calls to SQLite on every buzzer tap or score update, which
+matters when multiple phones interact simultaneously over LAN. Player data is
+discarded when the session ends — no game history is persisted at this stage.
+
 ---
 
 ## 👤 Author
